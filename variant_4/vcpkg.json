@@ -1,0 +1,8 @@
+{
+  "name": "variant_4",
+  "version": "1.0.0",
+  "dependencies": [
+    "fmt",
+    "gtest"
+  ]
+}
