@@ -3,7 +3,7 @@
 #include "grades.h"
 
 int main() {
-    std::vector<int> grades = {90, 75, 88, 100, 67};
+    std::vector<int> grades = {24, 22, 88, 100, 67};
 
     fmt::print("Average: {}\n", getAverage(grades));
     fmt::print("Min: {}\n", getMin(grades));
