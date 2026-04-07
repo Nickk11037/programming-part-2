@@ -1,25 +1,38 @@
 #include "grades.h"
 
-double getAverage(const std::vector<int>& grades) {
+double calculateAverage(const int* grades, int size) {
+    if (size == 0) return 0;
+
     int sum = 0;
-    for (int g : grades) {
-        sum += g;
+    for (int i = 0; i < size; i++) {
+        sum += grades[i];
     }
-    return (double)sum / grades.size();
+
+    return (double)sum / size;
 }
 
-int getMin(const std::vector<int>& grades) {
+int findMin(const int* grades, int size) {
+    if (size == 0) return 0;
+
     int min = grades[0];
-    for (int g : grades) {
-        if (g < min) min = g;
+    for (int i = 1; i < size; i++) {
+        if (grades[i] < min) {
+            min = grades[i];
+        }
     }
+
     return min;
 }
 
-int getMax(const std::vector<int>& grades) {
+int findMax(const int* grades, int size) {
+    if (size == 0) return 0;
+
     int max = grades[0];
-    for (int g : grades) {
-        if (g > max) max = g;
+    for (int i = 1; i < size; i++) {
+        if (grades[i] > max) {
+            max = grades[i];
+        }
     }
+
     return max;
 }

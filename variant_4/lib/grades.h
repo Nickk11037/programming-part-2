@@ -1,6 +1,5 @@
 #pragma once
-#include <vector>
 
-double getAverage(const std::vector<int>& grades);
-int getMin(const std::vector<int>& grades);
-int getMax(const std::vector<int>& grades);
+double calculateAverage(const int* grades, int size);
+int findMin(const int* grades, int size);
+int findMax(const int* grades, int size);

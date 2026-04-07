@@ -1,13 +1,13 @@
-#include <vector>
-#include <fmt/core.h>
+#include <iostream>
 #include "grades.h"
 
 int main() {
-    std::vector<int> grades = {24, 22, 88, 100, 67};
+    int grades[] = {85, 90, 78, 92, 88};
+    int size = 5;
 
-    fmt::print("Average: {}\n", getAverage(grades));
-    fmt::print("Min: {}\n", getMin(grades));
-    fmt::print("Max: {}\n", getMax(grades));
+    std::cout << "Average: " << calculateAverage(grades, size) << std::endl;
+    std::cout << "Min: " << findMin(grades, size) << std::endl;
+    std::cout << "Max: " << findMax(grades, size) << std::endl;
 
     return 0;
 }

@@ -1,18 +1,17 @@
 #include <gtest/gtest.h>
 #include "grades.h"
-#include <vector>
 
 TEST(GradesTest, Average) {
-    std::vector<int> grades = {80, 90, 100};
-    EXPECT_EQ(getAverage(grades), 90);
+    int arr[] = {80, 90, 100};
+    EXPECT_DOUBLE_EQ(calculateAverage(arr, 3), 90);
 }
 
 TEST(GradesTest, Min) {
-    std::vector<int> grades = {80, 90, 100};
-    EXPECT_EQ(getMin(grades), 80);
+    int arr[] = {80, 60, 100};
+    EXPECT_EQ(findMin(arr, 3), 60);
 }
 
 TEST(GradesTest, Max) {
-    std::vector<int> grades = {80, 90, 100};
-    EXPECT_EQ(getMax(grades), 100);
+    int arr[] = {80, 60, 100};
+    EXPECT_EQ(findMax(arr, 3), 100);
 }
