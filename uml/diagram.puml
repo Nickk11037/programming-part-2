@@ -1,0 +1,15 @@
+@startuml
+class BankAccount {
+  - accountNumber : int
+  - balance : double
+  - creditLimit : double
+  - blocked : bool
+  - operationsCount : int
+
+  + deposit(amount)
+  + withdraw(amount)
+  + canWithdraw(amount)
+  + blockAccount()
+  + unblockAccount()
+}
+@enduml
