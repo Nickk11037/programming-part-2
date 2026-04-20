@@ -1,0 +1,44 @@
+@startuml
+
+class Book {
+  - string title
+  - Chapter* chapters
+  - int size
+  - int capacity
+  - Cover cover
+  - Index index
+  + addChapter()
+  + print()
+}
+
+class Chapter {
+  - string title
+  - Page* pages
+  - int size
+  - int capacity
+  + addPage()
+}
+
+class Page {
+  - int number
+  - string content
+}
+
+class Cover {
+  - string material
+  - string color
+}
+
+class Index {
+  - string* entries
+  - int size
+  - int capacity
+  + addEntry()
+}
+
+Book *-- Chapter
+Chapter *-- Page
+Book *-- Cover
+Book *-- Index
+
+@enduml
