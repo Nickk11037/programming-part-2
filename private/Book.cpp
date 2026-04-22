@@ -1,4 +1,5 @@
 #include "Book.h"
+#include "Chapter.h"
 #include <iostream>
 
 Book::Book(const std::string& title, const Cover& cover, const Index& index)

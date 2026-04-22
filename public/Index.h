@@ -11,7 +11,10 @@ private:
 
 public:
     Index();
+    Index(const Index& other);
     ~Index();
+
+    Index& operator=(const Index& other);
 
     void addEntry(const std::string& entry);
     int getSize() const;

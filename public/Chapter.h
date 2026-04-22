@@ -12,8 +12,12 @@ private:
     void resize();
 
 public:
+    Chapter();
     Chapter(const std::string& title);
+    Chapter(const Chapter& other);
     ~Chapter();
+
+    Chapter& operator=(const Chapter& other);
 
     void addPage(const Page& page);
     std::string getTitle() const;
