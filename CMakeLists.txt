@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(include)
 
 set(SOURCES
-    src/main.cpp
+    main.cpp
     src/Employee.cpp
     src/Engineer.cpp
     src/SeniorEngineer.cpp
