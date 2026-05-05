@@ -1,0 +1,29 @@
+classDiagram
+    class Employee {
+        -string name
+        -int id
+        -double salary
+        +printInfo()
+    }
+
+    class Engineer {
+        -string specialization
+        -int experience
+        +printInfo()
+    }
+
+    class SeniorEngineer {
+        -int projectsLed
+        -double bonus
+        +printInfo()
+    }
+
+    class Manager {
+        -int teamSize
+        -string department
+        +printInfo()
+    }
+
+    Employee <|-- Engineer
+    Engineer <|-- SeniorEngineer
+    Employee <|-- Manager
