@@ -1,0 +1,35 @@
+classDiagram
+    class Employee {
+        <<abstract>>
+        -name: string
+        -salary: double
+        +Employee(name, salary)
+        +virtual ~Employee()
+        +virtual void work() = 0
+        +virtual double calculateSalary() = 0
+    }
+
+    class Engineer {
+        -projects: int
+        +Engineer(name, salary, projects)
+        +void work() override
+        +double calculateSalary() override
+    }
+
+    class SeniorEngineer {
+        -bonus: double
+        +SeniorEngineer(name, salary, projects, bonus)
+        +void work() override
+        +double calculateSalary() override
+    }
+
+    class Manager {
+        -teamSize: int
+        +Manager(name, salary, teamSize)
+        +void work() override
+        +double calculateSalary() override
+    }
+
+    Employee <|-- Engineer
+    Engineer <|-- SeniorEngineer
+    Employee <|-- Manager
