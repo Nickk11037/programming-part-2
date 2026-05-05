@@ -1,0 +1,33 @@
+classDiagram
+    class File {
+        -string name
+        -size_t size
+        +process()*
+    }
+
+    class TextFile {
+        -string content
+        +printText()
+    }
+
+    class Compressible {
+        -double compressionRatio
+        +compress()
+    }
+
+    class Encryptable {
+        -int key
+        +encrypt()
+    }
+
+    class SecureCompressedFile {
+        +process()
+    }
+
+    File <|-- TextFile
+    File <|-- Compressible
+    File <|-- Encryptable
+
+    TextFile <|-- SecureCompressedFile
+    Compressible <|-- SecureCompressedFile
+    Encryptable <|-- SecureCompressedFile
