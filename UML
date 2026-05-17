@@ -1,0 +1,41 @@
+@startuml
+
+class Sensor {
+    - id : int
+    - value : double
+    + setValue(v : double)
+    + getValue() : double
+    + print()
+}
+
+class ReadingArray {
+    - data : Sensor*
+    - size : int
+    + operator[](index : int)
+    + getSize() : int
+    + ReadingArray(const ReadingArray&)
+    + operator=(const ReadingArray&)
+    + ReadingArray(ReadingArray&&)
+    + operator=(ReadingArray&&)
+    + ~ReadingArray()
+}
+
+class SimplePtr<T> {
+    - ptr : T*
+    + operator*()
+    + operator->()
+    + get()
+    + ~SimplePtr()
+}
+
+class SensorNode {
+    - id : int
+    - next : shared_ptr<SensorNode>
+    - prev : weak_ptr<SensorNode>
+}
+
+ReadingArray --> Sensor
+SimplePtr --> Sensor
+SensorNode --> SensorNode
+
+@enduml
