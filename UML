@@ -1,0 +1,41 @@
+@startuml
+
+class "FixedQueue<T, N>" {
+  - data[N] : T
+  - frontIndex : int
+  - rearIndex : int
+  - count : int
+
+  + enqueue(value : T) : bool
+  + dequeue() : bool
+  + front() : T
+  + isEmpty() : bool
+  + isFull() : bool
+  + size() : int
+}
+
+class "QueueItem<Key, Value>" {
+  - key : Key
+  - value : Value
+
+  + getKey() : Key
+  + getValue() : Value
+}
+
+class "QueueReport<T>" {
+  - firstTicket : T
+  - currentSize : int
+
+  + getFirstTicket() : T
+  + getCurrentSize() : int
+}
+
+class "TicketValidator<T>" {
+  + isValid(value : T) : bool
+}
+
+class "TicketValidator<int>" {
+  + isValid(value : int) : bool
+}
+
+@enduml
