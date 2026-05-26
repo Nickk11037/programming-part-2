@@ -1,0 +1,15 @@
+id=501; type=deposit; amount=250.00; status=ok
+id=502; type=withdrawal; amount=100.50; status=ok
+id=503; type=transfer; amount=900.00; status=failed
+id=504; type=deposit; amount=300.00; status=ok
+id=505; type=withdrawal; amount=120.75; status=ok
+id=506; type=transfer; amount=1000.00; status=ok
+id=507; type=deposit; amount=75.20; status=failed
+id=508; type=withdrawal; amount=640.00; status=ok
+id=509; type=transfer; amount=410.90; status=ok
+id=510; type=deposit; amount=50.00; status=ok
+id=511; type=payment; amount=100.00; status=ok
+id=512; type=deposit; amount=-50.00; status=ok
+id=513; type=withdrawal; amount=24abc; status=ok
+id=514; type=transfer; amount=0; status=ok
+broken line
