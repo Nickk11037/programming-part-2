@@ -1,0 +1,41 @@
+@startuml
+
+class TransactionRecord {
+    +string id
+    +string type
+    +double amount
+    +string status
+}
+
+class InvalidLine {
+    +int lineNumber
+    +string text
+    +string error
+}
+
+class StringUtils {
+    +trim()
+    +split()
+    +parseKeyValue()
+    +trim_view()
+    +split_view()
+    +parseKeyValueView()
+}
+
+class Record {
+    +parseRecord()
+    +maskIdentifier()
+    +getLargestTransaction()
+}
+
+class ReportBuilder {
+    +buildReport()
+}
+
+Record --> TransactionRecord
+Record --> InvalidLine
+ReportBuilder --> TransactionRecord
+ReportBuilder --> InvalidLine
+StringUtils ..> Record
+
+@enduml

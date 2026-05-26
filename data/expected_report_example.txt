@@ -1,0 +1,5 @@
+BANK TRANSACTION REPORT
+
+Successful operations sum: 2871.15
+Failed operations: 2
+Largest transaction: 1000.00
