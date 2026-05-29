@@ -1,0 +1,48 @@
+```plantuml
+@startuml
+
+class ProductRecord {
+    +id : int
+    +name : string
+    +category : string
+    +price : double
+    +stock : int
+    +print()
+}
+
+class SharedProductRecord {
+    +id : int
+    +name : shared_ptr<string>
+    +category : string
+    +price : double
+    +stock : int
+    +print()
+}
+
+class UniqueProductRecord {
+    +id : int
+    +name : string
+    +category : string
+    +price : unique_ptr<double>
+    +stock : int
+    +print()
+}
+
+class ContainerExperiments {
+    +listExperiment()
+    +dequeExperiment()
+    +forwardListExperiment()
+    +sharedPtrExperiment()
+    +uniquePtrExperiment()
+}
+
+class ContainerReport {
+    +showContainerComparison()
+}
+
+ContainerExperiments --> ProductRecord
+ContainerExperiments --> SharedProductRecord
+ContainerExperiments --> UniqueProductRecord
+
+@enduml
+```
